@@ -1,0 +1,17 @@
+# MERN
+
+difference in var let and const
+
+var variables have function scope or global scope, meaning they are accessible throughout the entire function or globally if declared outside a function.
+ They are hoisted to the top of their scope and initialized with a default value of undefined, allowing them to be accessed before their declaration without causing an error.
+ var variables can be both updated and re-declared within the same scope.
+
+ In contrast, let and const variables are block-scoped, meaning they are only accessible within the block (e.g., {}) where they are declared, such as inside loops or conditional statements.
+ This block scoping helps prevent unintended variable access and reduces bugs.
+ Both let and const are hoisted to the top of their scope but remain in a "temporal dead zone" (TDZ) until their actual declaration, making them inaccessible before initialization and resulting in a ReferenceError if accessed prematurely.
+ let variables can be updated but cannot be re-declared within the same scope 
+ , while const variables cannot be updated or re-declared at all.
+ A const variable must be initialized at the time of declaration and cannot be declared without an initial value.
+
+ An important nuance with const is that while the variable binding is immutable, the contents of objects or arrays declared with const can still be modified; only the reference to the object or array cannot be changed.
+ For example, you cannot reassign a const variable to a different object, but you can change the properties of the object it references.
